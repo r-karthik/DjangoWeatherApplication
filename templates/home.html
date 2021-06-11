@@ -4,13 +4,24 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-<!--  Hi {{ user.username }}!-->
-<!--  <button type="submit">Get Weather Information</button>-->
-<form method="post">
+<form action = "" method = "get">
   <h4>Enter Email ID's followed by comma</h4>
-    <input>
-  <button type="submit">Submit</button>
+    <label for="email_id">Email ID: </label>
+    <input id="email_id" type="text" name="email_id">
+    <input type="submit" value="Submit">
 </form>
+<!--<h2>Data {{ Emails }}</h2>-->
+{% if Emails %}
+<h3>Sending Email To:</h3>
+{% for email in Emails %}
+<h4>{{ email }}</h4>
+{% endfor %}
+{% endif %}
+<!--<form method="post">-->
+<!--  <h4>Enter Email ID's followed by comma</h4>-->
+<!--    <input>-->
+<!--  <button type="submit">Submit</button>-->
+<!--</form>-->
 {% else %}
   <p>You are not logged in. Please
     <a href="{% url 'login' %}">Log In</a>

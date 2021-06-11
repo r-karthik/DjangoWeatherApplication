@@ -2,17 +2,35 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<table>
+<table class="table table-bordered">
+  <thead>
     <tr>
-        <td><h1><b>City</b></h1></td>
-        <td><h1><b>Data</b></h1></td>
+      <th><h2><B>City</B></h2></th>
+      <th><h2><B>Data</B></h2></th>
     </tr>
-    {% for key, value in Data.items %}
-    <tr>
-        <td>{{key}}</td>
-        <td>{{value}}</td>
-        </tr>
-{% endfor %}
-    </table>
+  </thead>
+  <tbody>
+    {% for user in post_list %}
+      <tr>
+        <td>{{ user.city_name }}</td>
+        <td>{{ user.data }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if post_list.has_other_pages %}
+  <nav aria-label="Page navigation conatiner"></nav>
+  <ul class="pagination justify-content-center">
+    {% if post_list.has_previous %}
+    <li><a href="?page={{ post_list.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+    {% endif %}
+    {% if post_list.has_next %}
+    <li><a href="?page={{ post_list.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+   {% endif %}
+  </ul>
+  </nav>
+</div>
+{% endif %}
 
 {% endblock %}
