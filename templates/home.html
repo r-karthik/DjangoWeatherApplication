@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<!--  Hi {{ user.username }}!-->
+<!--  <button type="submit">Get Weather Information</button>-->
+<form method="post">
+  <h4>Enter Email ID's followed by comma</h4>
+    <input>
+  <button type="submit">Submit</button>
+</form>
+{% else %}
+  <p>You are not logged in. Please
+    <a href="{% url 'login' %}">Log In</a>
+  </p>
+{% endif %}
+{% endblock %}
