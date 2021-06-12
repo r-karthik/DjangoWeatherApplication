@@ -133,6 +133,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
+CELERY_BROKER_URL = 'redis://:p210a45526c181a958255f482f5e5c16f25055b7fcdb3e37cb1fcdb131026fb54@ec2-3-217-30-126.compute-1.amazonaws.com:25850'
+
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Activate Django-Heroku.
