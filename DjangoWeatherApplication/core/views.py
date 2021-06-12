@@ -1,10 +1,9 @@
-from django.contrib.auth.decorators import login_required, permission_required
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
 import requests
 import datetime
 import re
 import xlsxwriter
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import render
 from DjangoWeatherApplication.core.models import WeatherData
@@ -33,7 +32,7 @@ def get_weather_data(request):
             a.save()
         return render(request, 'refresh.html', {'Date': datetime.datetime.now()})
     except Exception as exception:
-        return Response(status=status.HTTP_206_PARTIAL_CONTENT, data=exception)
+        return render(request, 'refresh.html', {'Exception': exception})
 
 
 def index(request):

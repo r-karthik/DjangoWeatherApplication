@@ -3,4 +3,7 @@
 
 {% block content %}
 <h1>Data refreshed on {{ Date }}</h1>
+{% if Exception %}
+<h2>Exception is:  {{ Exception }}</h2>
+{% endif %}
 {% endblock %}
