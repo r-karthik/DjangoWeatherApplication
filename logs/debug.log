@@ -1,0 +1,13 @@
+2021-06-13 03:23:06,828 INFO $DATABASE_URL not found, falling back to previous settings!
+2021-06-13 03:23:06,828 INFO Applying Heroku Staticfiles configuration to Django settings.
+2021-06-13 03:23:06,828 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2021-06-13 03:23:06,828 INFO Applying Heroku logging configuration to Django settings.
+2021-06-13 03:23:08,174 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-06-13 03:23:08,174 INFO Added job "get_weather_data" to job store "default"
+2021-06-13 03:23:08,174 INFO Scheduler started
+2021-06-13 03:23:08,174 DEBUG Looking for jobs to run
+2021-06-13 03:23:08,174 DEBUG Background Scheduler Started
+2021-06-13 03:23:08,174 DEBUG Next wakeup is due at 2021-06-13 03:28:08.174349+05:30 (in 300.000000 seconds)
+2021-06-13 03:23:08,377 DEBUG Using proactor: IocpProactor
+2021-06-13 03:23:09,578 ERROR in form_data: 'email_id'
+2021-06-13 03:23:11,008 ERROR in form_data: 'email_id'

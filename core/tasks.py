@@ -5,6 +5,9 @@ from .constants import ActionNames
 from .models import WeatherData
 import xlwt
 from io import BytesIO
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 @shared_task
@@ -25,7 +28,7 @@ def send_email_task(excel_file, emails):
                 content=excel_file.getvalue(),
                 mimetype='application/vnd.ms-excel')
     mail.send()
-    return None
+    logger.debug("Email has been Sent.")
 
 
 def create_excel(emails):
@@ -50,6 +53,7 @@ def create_excel(emails):
         worksheet.write(row_count, 1, city.data)
         row_count += 1
     workbook.save(excel_file)
+    logger.debug("Excel Bytes Generated")
     # Calling send_email_task Function
     send_email_task(excel_file, emails)
     return True

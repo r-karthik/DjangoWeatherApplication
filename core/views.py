@@ -1,42 +1,15 @@
-import requests
-import datetime
 import re
-from rest_framework.decorators import api_view
+import logging
 from django.shortcuts import render
-from DjangoWeatherApplication.core.models import WeatherData
+from core.models import WeatherData
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .tasks import create_excel
 
-API_KEY = 'a948ab4862c0d6055597ff96bec0f06d'
-cities = ['London', 'Paris', 'Mumbai', 'Delhi', 'Kolkata', 'France', 'Tokyo', 'Berlin', 'Shanghai', 'Cairo', 'Lagos',
-          'Bangalore', 'Bogota', 'Surat', 'Toronto', 'Alexandria', 'Sydney', 'Nairobi', 'Kabul', 'Rome', 'Medellin',
-          'Athens', 'Dubai', 'Cali', 'Zibo', 'Yantai', 'Beirut', 'Houston', 'Agra', 'Mecca']
+logger = logging.getLogger(__name__)
 
 
-@api_view(['GET'])
-def get_weather_data(request):
-    """
-    Used to Fetch Weather Data from openweathermap.org website
-
-    :param request: HTTP Request
-    :return: Renders refresh.html page
-    """
-
-    # Query WeatherData table & delete all rows
-    query = WeatherData.objects.all()
-    query.delete()
-    try:
-        # Iterate Over all the cities & Fetch weather data using city & API_KEY
-        for city in sorted(cities):
-            response = requests.post('http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'.format(city, API_KEY))
-            response = response.json()
-            a = WeatherData(city_name=city, data=str(response))
-            a.save()  # Saving the Data to DB
-        return render(request, 'refresh.html', {'Date': datetime.datetime.now()})
-    except Exception as exception:
-        return render(request, 'refresh.html', {'Exception': exception})
-
-
+@login_required
 def index(request):
     """
     Used to Paginate & Display weather data of 10 cities per page
@@ -56,6 +29,7 @@ def index(request):
     return render(request, 'weather.html', {'post_list': users})
 
 
+@login_required
 def form_data(request):
     """
     Fetches data from Form, Validates Email's using Regex & calls create_excel function
@@ -75,4 +49,5 @@ def form_data(request):
         return render(request, "home.html", {"Emails": emails,
                                              "Message": "Sending Email has failed. Please try again."})
     except Exception as exception:
+        logger.error("in form_data: {}".format(exception))
         return render(request, "home.html", {"Exception": exception})
