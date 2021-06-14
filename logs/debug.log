@@ -11,3 +11,56 @@
 2021-06-13 03:23:08,377 DEBUG Using proactor: IocpProactor
 2021-06-13 03:23:09,578 ERROR in form_data: 'email_id'
 2021-06-13 03:23:11,008 ERROR in form_data: 'email_id'
+2021-06-14 17:28:57,942 INFO $DATABASE_URL not found, falling back to previous settings!
+2021-06-14 17:28:57,942 INFO Applying Heroku Staticfiles configuration to Django settings.
+2021-06-14 17:28:57,942 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2021-06-14 17:28:57,942 INFO Applying Heroku logging configuration to Django settings.
+2021-06-14 17:29:10,247 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-06-14 17:29:10,247 INFO Added job "get_weather_data" to job store "default"
+2021-06-14 17:29:10,247 INFO Scheduler started
+2021-06-14 17:29:10,249 DEBUG Background Scheduler Started
+2021-06-14 17:29:10,287 DEBUG Looking for jobs to run
+2021-06-14 17:29:10,287 DEBUG Next wakeup is due at 2021-06-14 17:59:10.247536+05:30 (in 1799.959978 seconds)
+2021-06-14 17:29:10,795 DEBUG Using proactor: IocpProactor
+2021-06-14 17:29:23,199 WARNING Warning in form_data: 'email_id'
+2021-06-14 17:29:23,962 WARNING Not Found: /favicon.ico
+2021-06-14 17:30:14,410 WARNING Warning in form_data: 'email_id'
+2021-06-14 17:30:22,188 DEBUG Excel Bytes Generated
+2021-06-14 17:30:28,902 DEBUG Email has been Sent.
+2021-06-14 17:32:17,123 WARNING Warning in form_data: 'email_id'
+2021-06-14 20:06:06,237 INFO $DATABASE_URL not found, falling back to previous settings!
+2021-06-14 20:06:06,237 INFO Applying Heroku Staticfiles configuration to Django settings.
+2021-06-14 20:06:06,237 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2021-06-14 20:06:06,237 INFO Applying Heroku logging configuration to Django settings.
+2021-06-14 20:06:07,578 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-06-14 20:06:07,579 INFO Added job "get_weather_data" to job store "default"
+2021-06-14 20:06:07,579 INFO Scheduler started
+2021-06-14 20:06:07,580 DEBUG Looking for jobs to run
+2021-06-14 20:06:07,580 DEBUG Background Scheduler Started
+2021-06-14 20:06:07,580 DEBUG Next wakeup is due at 2021-06-14 20:36:07.578330+05:30 (in 1799.998006 seconds)
+2021-06-14 20:06:07,791 DEBUG Using proactor: IocpProactor
+2021-06-14 20:06:13,358 WARNING Warning in form_data: 'email_id'
+2021-06-14 20:06:17,475 DEBUG Excel Bytes Generated
+2021-06-14 20:06:19,499 WARNING Warning in form_data: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError mr23sm13012210pjb.12 - gsmtp', 'webmaster@localhost')
+2021-06-14 20:06:55,607 DEBUG Excel Bytes Generated
+2021-06-14 20:06:56,730 WARNING Warning in form_data: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError r24sm17512160pjz.11 - gsmtp', 'webmaster@localhost')
+2021-06-14 20:07:02,853 WARNING Warning in form_data: 'email_id'
+2021-06-14 20:07:07,063 WARNING Warning in form_data: 'email_id'
+2021-06-14 20:07:08,803 WARNING Warning in form_data: 'email_id'
+2021-06-14 20:07:12,261 DEBUG Excel Bytes Generated
+2021-06-14 20:07:13,393 WARNING Warning in form_data: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError g13sm13000068pfv.65 - gsmtp', 'webmaster@localhost')
+2021-06-14 21:50:32,019 INFO $DATABASE_URL not found, falling back to previous settings!
+2021-06-14 21:50:32,019 INFO Applying Heroku Staticfiles configuration to Django settings.
+2021-06-14 21:50:32,020 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2021-06-14 21:50:32,020 INFO Applying Heroku logging configuration to Django settings.
+2021-06-14 21:50:33,731 INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2021-06-14 21:50:33,732 INFO Added job "get_weather_data" to job store "default"
+2021-06-14 21:50:33,732 INFO Scheduler started
+2021-06-14 21:50:33,733 DEBUG Looking for jobs to run
+2021-06-14 21:50:33,734 DEBUG Background Scheduler Started
+2021-06-14 21:50:33,734 DEBUG Next wakeup is due at 2021-06-14 22:20:33.731929+05:30 (in 1799.997008 seconds)
+2021-06-14 21:50:33,951 DEBUG Using proactor: IocpProactor
+2021-06-14 21:50:38,901 WARNING Warning in form_data: 'email_id'
+2021-06-14 21:50:45,198 WARNING Warning in form_data: 'email_id'
+2021-06-14 21:50:52,959 DEBUG Excel Bytes Generated
+2021-06-14 21:50:57,037 DEBUG Email has been Sent.
